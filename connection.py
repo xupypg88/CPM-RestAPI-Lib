@@ -1176,7 +1176,6 @@ class AWSQueryConnection(AWSAuthConnection):
                 body = body.encode('utf-8')
             try:
                 xml.sax.parseString(body, h)
-                raise Exception('Something happened with SAX and it is sucks')
             except Exception as error:
                 raise Exception(error + '\n' + 'Body: \n' + body)
             return rs
@@ -1202,7 +1201,6 @@ class AWSQueryConnection(AWSAuthConnection):
                 body = body.encode('utf-8')
             try:
                 xml.sax.parseString(body, h)
-                raise Exception('Something happened with SAX and it is sucks')
             except Exception as error:
                 raise Exception(error + '\n' + 'Body: \n' + body)
             return obj
@@ -1225,7 +1223,6 @@ class AWSQueryConnection(AWSAuthConnection):
             h = boto.handler.XmlHandler(rs, parent)
             try:
                 xml.sax.parseString(body, h)
-                raise Exception('Something happened with SAX and it is sucks')
             except Exception as error:
                 raise Exception(error + '\n' + 'Body: \n' + body)
 
