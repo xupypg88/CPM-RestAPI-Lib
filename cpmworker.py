@@ -4,6 +4,7 @@ import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+
 #Enable logging
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
