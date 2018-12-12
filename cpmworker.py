@@ -1,6 +1,7 @@
 import logging
 import requests
 import urllib3
+import os
 
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -165,3 +166,7 @@ class CPMworker:
 def start_descrption():
     errors = list()
     return errors
+
+wk = CPMworker(os.environ.get('CPMAPIHOST'),os.environ.get('CPMAPIKEY'))
+print(wk.get_accounts())
+
