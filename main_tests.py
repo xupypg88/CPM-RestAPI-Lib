@@ -1,7 +1,7 @@
 from cpmworker import *
 import os
 import urllib3
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning);
 
 HOST=os.environ.get('CPMAPIHOST')
 API_KEY=os.environ.get('CPMAPIKEY')
@@ -14,6 +14,7 @@ import unittest
 class APIFunctionsUsersCase(unittest.TestCase):
 
     def test_getaccountslist(self):
+        print("<hr> <b>Test</b>: getting accounts..")
         predefined = [{'id': 2, 'user': 1, 'name': 'main_backup3', 'authentication': 'R', 'is_dr_account': False, 'scan_tagged_resources': False, 'scan_regions': [2], 'capture_vpcs': True}, {'id': 3, 'user': 1, 'name': 'dr', 'authentication': 'R', 'is_dr_account': True, 'allow_deleting_snapshots': True}, {'id': 4, 'user': 1, 'name': 'esche', 'authentication': 'R', 'is_dr_account': False, 'scan_tagged_resources': False, 'scan_regions': [2], 'capture_vpcs': True}, {'id': 5, 'user': 2, 'name': 'grizzly2_tied', 'authentication': 'A', 'is_dr_account': False, 'account_number': '124556737267', 'role_name': 'Mikhail.Topskiy', 'external_id': None, 'assume_from_account': 2, 'scan_tagged_resources': False, 'scan_regions': [2], 'capture_vpcs': True}]
         wk = CPMworker(HOST, API_KEY)
         self.assertEqual(wk.get_accounts(), predefined)
