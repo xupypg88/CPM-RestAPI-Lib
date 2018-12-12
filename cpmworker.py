@@ -167,6 +167,6 @@ def start_descrption():
     errors = list()
     return errors
 
-wk = CPMworker(os.environ.get('CPMAPIHOST'),os.environ.get('CPMAPIKEY'))
-print(wk.get_accounts())
+#wk = CPMworker(os.environ.get('CPMAPIHOST'),os.environ.get('CPMAPIKEY'))
+#print(wk.get_accounts())
 
