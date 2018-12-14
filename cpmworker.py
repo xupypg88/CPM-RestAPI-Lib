@@ -5,7 +5,49 @@ import os
 
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-#@2323
+"""
+Project: CPM API Wrapper for everyone
+Current CPM Major Testing Version: 2.4.0
+
+Changelog
+
+V1.0
+
+Base operations:
+
+- Get token
+- Refresh token
+- Login
+
+- List users
+- Create users
+- Remove users
+
+- List Accounts
+- Create Accounts
+- Remove Accounts
+
+- List Policies
+- Create Policies
+- Remove Policies
+- Run Policies ASAP
+- Describe Policy's properties
+- Update Policy's properties
+
+- List Policies
+- Create Policies
+- Remove Policies
+- Run Policies ASAP
+- Describe Policy's properties
+- Update Policy's properties
+
+- List Schedules
+- Create Schedules
+- Remove Schedules
+- Describe Schedules's properties
+- Update Schedules's properties
+ 
+"""
 
 #Enable logging
 logger = logging.getLogger(__name__)
@@ -54,6 +96,7 @@ class CPMworker:
         self.VERIFY_SSL = verify_ssl
         self.access_token = None
         self.obtain_token()
+        logger.info("CPM API worker initialized")
         return
 
     def obtain_token(self):
@@ -81,9 +124,9 @@ class CPMworker:
             return
         else: raise TokenInitializationError()
 
-
-        # todo implement get_users
-    def get_users(self):
+    # todo implement function Create users
+    # todo implement function Remove users
+    def list_users(self):
         """
         List all users added to CPM sever
         :return:List of users in JSON format (list(dict))
@@ -97,23 +140,26 @@ class CPMworker:
 
         return data
 
-    def get_user(self, name):
+    def decribe_user(self, name):
         """
         gets user by name
         :param name: username how it set in CPM - should be exactly the same
         :return: JSON of user data (dict) or None if name is incorrect
         """
-        users = self.get_users()
+        users = self.list_users()
         for user in users:
             if user['username'] == name:
                 return user
 
         logger.warning('Searching for user "{0}" failed. User not found.'.format(name))
         return None
-    def get_accounts(self):
+
+
+    # todo implement function List Accounts returns json object
+    def list_accounts(self):
         """
         Lists AWS accounts added
-        :return: JSON list of accounts (list(dict))
+        :return: JSON list of accounts (Json Obj)
         """
         data = self.send(
             self.URL_API.format(host=self.host, api_point=self.API_ACCOUNTS),
@@ -121,17 +167,30 @@ class CPMworker:
         )
         logger.debug('Executed get_accounts(): {0}'.format(data))
         return data
-    # todo implement get_accounts
-    # todo implement get_schedules
-    # todo implement get_polices
-    # todo implement get_backups
 
-    # todo implement create_policy
-    # todo implement create_schedule
-    # todo implement create_account
-    # todo implement cleanup
+    # todo implement function Create Accounts
+    # todo implement function Remove Accounts
 
-    # todo implement send() update
+    # todo implement function List Policies
+    # todo implement function Create Policies
+    # todo implement function Remove Policies
+    # todo implement function Run Policies ASAP
+    # todo implement function Describe Policy's properties
+    # todo implement function Update Policy's properties
+
+    # todo implement function List Policies
+    # todo implement function Create Policies
+    # todo implement function Remove Policies
+    # todo implement function Run Policies ASAP
+    # todo implement function Describe Policy's properties
+    # todo implement function Update Policy's properties
+
+    # todo implement function List Schedules
+    # todo implement function Create Schedules
+    # todo implement function Remove Schedules
+    # todo implement function Describe Schedules's properties
+    # todo implement function Update Schedules's properties
+
     def send(self, url, data=None, method='get'):
         """
         Sends any type of data via get or post methods
