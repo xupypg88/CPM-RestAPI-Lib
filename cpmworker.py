@@ -1,13 +1,15 @@
 import logging
 import requests
 import urllib3
+import os
 
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+#@2323
 
 #Enable logging
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.INFO)
 # create a file handler
 handler = logging.FileHandler('API.log')
 #handler.setLevel(logging.INFO)
@@ -18,6 +20,7 @@ handler.setFormatter(formatter)
 logger.addHandler(handler)
 
 
+# todo clean up old trash
 # todo add exceptions
 
 
@@ -118,7 +121,17 @@ class CPMworker:
         )
         logger.debug('Executed get_accounts(): {0}'.format(data))
         return data
+    # todo implement get_accounts
+    # todo implement get_schedules
+    # todo implement get_polices
+    # todo implement get_backups
 
+    # todo implement create_policy
+    # todo implement create_schedule
+    # todo implement create_account
+    # todo implement cleanup
+
+    # todo implement send() update
     def send(self, url, data=None, method='get'):
         """
         Sends any type of data via get or post methods
@@ -150,11 +163,10 @@ class CPMworker:
         return response.json()
 
 
-if __name__ == '__main__':
+def start_descrption():
+    errors = list()
+    return errors
 
-    host = ""
-    api_key = ""
-
-    wk = CPMworker(host, api_key)
-    print(wk.get_accounts())
+#wk = CPMworker(os.environ.get('CPMAPIHOST'),os.environ.get('CPMAPIKEY'))
+#print(wk.get_accounts())
 
