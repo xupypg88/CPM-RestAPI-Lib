@@ -83,6 +83,7 @@ class CPMworker:
 
     API_POLICY = "policies/"
     API_ACCOUNTS = "accounts/"
+    API_ACCOUNTSADD = "/api/accounts/backup/"
     API_SCHEDULES = "schedules/"
 
     HEADER_ACCEPT = "application/json; version=1.1"
@@ -126,7 +127,7 @@ class CPMworker:
 
     # todo implement function Create users
     # todo implement function Remove users
-    def list_users(self):
+    def describe_users(self):
         """
         List all users added to CPM sever
         :return:List of users in JSON format (list(dict))
@@ -140,13 +141,13 @@ class CPMworker:
 
         return data
 
-    def decribe_user(self, name):
+    def describe_user(self, name):
         """
         gets user by name
         :param name: username how it set in CPM - should be exactly the same
         :return: JSON of user data (dict) or None if name is incorrect
         """
-        users = self.list_users()
+        users = self.describe_users()
         for user in users:
             if user['username'] == name:
                 return user
@@ -156,7 +157,7 @@ class CPMworker:
 
 
     # todo implement function List Accounts returns json object
-    def list_accounts(self):
+    def describe_accounts(self):
         """
         Lists AWS accounts added
         :return: JSON list of accounts (Json Obj)
@@ -169,6 +170,14 @@ class CPMworker:
         return data
 
     # todo implement function Create Accounts
+    def create_account(self, dr = False):
+        """
+
+        :param dr: True if it should be DR account
+        :return: a newly created account data or error
+        """
+        return
+
     # todo implement function Remove Accounts
 
     # todo implement function List Policies
