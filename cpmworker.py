@@ -51,7 +51,7 @@ Base operations:
 
 #Enable logging
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.DEBUG)
 # create a file handler
 handler = logging.FileHandler('API.log')
 #handler.setLevel(logging.INFO)
@@ -83,7 +83,7 @@ class CPMworker:
 
     API_POLICY = "policies/"
     API_ACCOUNTS = "accounts/"
-    API_ACCOUNTSADD = "/api/accounts/backup/"
+    API_ACCOUNTSADD = "accounts/backup/"
     API_SCHEDULES = "schedules/"
 
     HEADER_ACCEPT = "application/json; version=1.1"
@@ -163,25 +163,48 @@ class CPMworker:
         :return: JSON list of accounts (Json Obj)
         """
         data = self.send(
-            self.URL_API.format(host=self.host, api_point=self.API_ACCOUNTS),
-            {'api_key': self.api_key}
+            self.URL_API.format(host=self.host, api_point=self.API_ACCOUNTS)
         )
         logger.debug('Executed get_accounts(): {0}'.format(data))
         return data
 
-    # todo implement function Create Accounts
-    def create_account(self, dr = False):
+    # todo fix function Create Accounts - code 500
+    def create_account(self, data):
         """
-
+        Creates backup account
         :param dr: True if it should be DR account
-        :return: a newly created account data or error
+        :return: a newly created account data in json or error
         """
-        return
+        #data = kwargs
+        return self.send(
+            self.URL_API.format(host=self.host, api_point=self.API_ACCOUNTSADD),
+            {'data_accounts_backup_create' : data},
+            'post'
+        )
 
     # todo implement function Remove Accounts
 
     # todo implement function List Policies
+    def describe_policies(self):
+
+        return self.send(
+            self.URL_API.format(host=self.host, api_point=self.API_POLICY),
+        )
     # todo implement function Create Policies
+    def create_policy(self, **kwarg):
+        """
+        Creates policy with provided parameters
+        :param data:
+        name = Policy name (only alphanumeric plus '_')
+        :return:
+        """
+        data_policies_create = {u'account': 2, u'name': u'PolicyTest02', u'enabled': True, u'user': 1, u'schedules': [], u'auto_remove_resource': u'N', u'id': 1, u'generations': 30, u'description': u''}
+        return self.send(
+            self.URL_API.format(host=self.host, api_point=self.API_ACCOUNTSADD),
+            {'data_policies_create': data_policies_create},
+            'post'
+        )
+
     # todo implement function Remove Policies
     # todo implement function Run Policies ASAP
     # todo implement function Describe Policy's properties
@@ -220,12 +243,12 @@ class CPMworker:
             url=url,
             headers=self.headers,
             verify=self.VERIFY_SSL)
-
+        logger.debug('Data: {1}'.format(url,data))
         if response.status_code != 200:
             logger.error(
-                'Status code error: HTTP status code should be "200" OK instead of "{0}".\n{1}'.format(
+                'Error in response: Status:  "{0}", should be "200" OK.\n{1}\n{2}'.format(
                     str(response.status_code),
-                    response.content)
+                    response.content,response)
             )
             return None
         return response.json()
