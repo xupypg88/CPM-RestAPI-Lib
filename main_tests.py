@@ -5,8 +5,8 @@ import unittest
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-HOST='18.235.133.229'#os.environ.get('CPMAPIHOST')
-API_KEY='b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede350214ede059b736c2010754906421bd95c8c742178f696ac395d769f5304cffa30ee'#os.environ.get('CPMAPIKEY')
+HOST=os.environ.get('CPMAPIHOST')
+API_KEY=os.environ.get('CPMAPIKEY')
 
 # todo write tests based on unittest module
 
