@@ -85,8 +85,9 @@ class CPMworker:
     API_ACCOUNTS = "accounts/"
     API_ACCOUNTSADD = "accounts/backup/"
     API_SCHEDULES = "schedules/"
+    API_GET_SCAN = "/user/settings/scan_resources"
 
-    HEADER_ACCEPT = "application/json; version=1.1"
+    HEADER_ACCEPT = "application/json; version: 1.1"
     HEADER_AUTHORIZATION = "Bearer {access_token}"
     headers = {'Accept': HEADER_ACCEPT}
 
@@ -138,6 +139,20 @@ class CPMworker:
         )
         logger.info('Executed get_users()')
         logger.debug('Executed get_users(): {0}'.format(data))
+
+        return data
+
+    def do_scan(self):
+        """
+        List all users added to CPM sever
+        :return:List of users in JSON format (list(dict))
+        """
+        data = self.send(
+            self.URL_API.format(host=self.host, api_point=self.API_GET_SCAN),
+            {'api_key': self.api_key}
+        )
+        logger.info('Executed get_scan()')
+        logger.debug('Executed get_scan(): {0}'.format(data))
 
         return data
 
@@ -198,7 +213,7 @@ class CPMworker:
         name = Policy name (only alphanumeric plus '_')
         :return:
         """
-        data_policies_create = {u'account': 2, u'name': u'PolicyTest02', u'enabled': True, u'user': 1, u'schedules': [], u'auto_remove_resource': u'N', u'id': 1, u'generations': 30, u'description': u''}
+        data_policies_create = {u'account': 2, u'name': u'PolicyTest02', u'enabled': True, u'user': 1, u'schedules': [], u'auto_remove_resource': u'N', u'generations': 30, u'description': u''}
         return self.send(
             self.URL_API.format(host=self.host, api_point=self.API_ACCOUNTSADD),
             {'data_policies_create': data_policies_create},
@@ -233,6 +248,7 @@ class CPMworker:
         """
         logger.debug('Opening {0}'.format(url))
 
+        print(self.headers)
         if method == 'post':
             response = requests.post(
             url=url,
