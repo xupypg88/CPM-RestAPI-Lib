@@ -1,0 +1,71 @@
+{u'status': u'M', u'account': 1, u'description': u'', u'start_time': u'2019-03-14T15:23:13Z', u'is_retry': False, u'dr_status': u'N', u'retry_scheduled': False, u'marked_for_deletion': True, u's3_copy_status': {u'status': u'S', u'progress_percent': None}, u'is_freezer_item': False, u'end_time': u'2019-03-14T17:49:07Z', u'user': 1, u'performed_quiecse': True, u'policy': 7, u'id': 236, u'dr_regions': None, u'name': u'Copy_to_S3'}
+{u'status': u'M', u'account': 1, u'description': u'', u'start_time': u'2019-03-14T22:52:07Z', u'is_retry': False, u'dr_status': u'N', u'retry_scheduled': False, u'marked_for_deletion': True, u's3_copy_status': {u'status': u'S', u'progress_percent': None}, u'is_freezer_item': False, u'end_time': u'2019-03-15T00:42:25Z', u'user': 1, u'performed_quiecse': True, u'policy': 7, u'id': 237, u'dr_regions': None, u'name': u'Copy_to_S3'}
+{u'status': u'M', u'account': 1, u'description': u'', u'start_time': u'2019-03-15T07:50:00Z', u'is_retry': False, u'dr_status': u'N', u'retry_scheduled': False, u'marked_for_deletion': True, u's3_copy_status': {u'status': u'S', u'progress_percent': None}, u'is_freezer_item': False, u'end_time': u'2019-03-15T07:51:03Z', u'user': 1, u'performed_quiecse': True, u'policy': 7, u'id': 238, u'dr_regions': None, u'name': u'Copy_to_S3'}
+{u'status': u'M', u'account': 1, u'description': u'', u'start_time': u'2019-03-16T07:50:00Z', u'is_retry': False, u'dr_status': u'N', u'retry_scheduled': False, u'marked_for_deletion': True, u's3_copy_status': {u'status': u'S', u'progress_percent': None}, u'is_freezer_item': False, u'end_time': u'2019-03-16T07:50:53Z', u'user': 1, u'performed_quiecse': True, u'policy': 7, u'id': 239, u'dr_regions': None, u'name': u'Copy_to_S3'}
+{u'status': u'B', u'account': 4, u'description': u'', u'start_time': u'2019-03-17T09:51:10Z', u'is_retry': False, u'dr_status': u'N', u'retry_scheduled': False, u'marked_for_deletion': False, u's3_copy_status': {u'status': u'S', u'progress_percent': None}, u'is_freezer_item': False, u'end_time': u'2019-03-17T09:51:37Z', u'user': 1, u'performed_quiecse': True, u'policy': 10, u'id': 241, u'dr_regions': None, u'name': u'Small_copytoS3'}
+
+
+[{
+	u'username': u'grizzlyroot',
+	u'status': u'S',
+	u'backup_id': u'241',
+	u'start_time':
+	u'2019-03-17T09:
+	51: 38Z',
+	u'succeeded': True,
+	u'deletion_time': None,
+	u'snapshot_aws_account_number': u'346423605891',
+	u'region': u'us-east-1',
+	u'snapshot_type': u's3_backup_copy',
+	u'id': 24,
+	u'instance_id': u'i-0b37fbb1755c2d408',
+	u'end_time': None,
+	u'aws_account_number': u'346423605891',
+	u'restore_point': u'{2e9c5eb9-b237-4eda-a927-404f2a93acc7}', u'
+	backed_up_resource_name': None,
+	u'policy_name': u'Small_copytoS3',
+	u'instance_name': None,
+	u'account_name': u'key_main',
+	u'backed_up_resource_id': u'vol-0ee5f35cd30bd64cf',
+	u'snapshot_account_name': u'main'
+}]
+
+/policies/{id}/copy_to_s3/
+
+{
+	u'repository': 1,
+	u'retention_time_based': {
+		u'enabled': False,
+		u'every_unit': u'O',
+		u'every_how_many': 12
+	},
+	u'enabled': True,
+	u'copy_interval': 1,
+	u'retention_generation_based': {
+		u'num_generations': 3,
+		u'enabled': True
+	},
+	u'resource_type': u's3_backup_copy'
+}
+/s3_repositories/{id}/
+
+{
+	u'account': 1,
+	u'name': u'CPM_S3_Nvirginia',
+	u'password_hint': None,
+	u'description': u'',
+	u'aws_region': u'us-east-1',
+	u'user': 1,
+	u'encryption_enabled': False,
+	u'id': 1,
+	u'aws_bucket_name': u's3-backet-repository-cpm'
+}
+
+/settings/identifier/
+
+[{
+	u'cpm_uuid': u'5ad7508a-1e6a-47e0-ba0c-f035ffa82d08',
+	u'cpm_name': u'CPM Server'
+}]
+
+
