@@ -61,6 +61,7 @@ class APIFunctionsUsersCase(unittest.TestCase):
         print(wk.describe_S3_backup(241))
         print(wk.describe_policy_s3(10))
         print(wk.describe_S3_repo(1))
+        print(wk.get_cpm_id())
         return
 
 if __name__ == '__main__':

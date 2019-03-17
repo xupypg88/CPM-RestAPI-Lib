@@ -88,6 +88,7 @@ class CPMworker:
     API_SCHEDULES = "schedules/"
     API_S3_REPO = "s3_repositories/{id}/"
 
+    API_SERVER_ID = "settings/identifier/"
     API_GET_SCAN = "/user/settings/scan_resources"
     # todo remove this
 
@@ -246,6 +247,11 @@ class CPMworker:
     def describe_S3_repo(self, id):
         return self.send(
             self.URL_API.format(host=self.host, api_point=self.API_S3_REPO.format(id=id))
+        )
+
+    def get_cpm_id(self):
+        return self.send(
+            self.URL_API.format(host=self.host, api_point=self.API_SERVER_ID)
         )
 
 

@@ -183,3 +183,17 @@
 2019-03-17 18:09:07,375 :: DEBUG: Data: None
 2019-03-17 18:09:07,375 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/s3_repositories/1/
 2019-03-17 18:09:08,026 :: DEBUG: Data: None
+2019-03-17 18:28:34,677 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
+2019-03-17 18:28:35,595 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
+2019-03-17 18:28:35,596 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiJhOGZhNjk5Y2RmNWE0YmZiYmEwM2JmYTYwYjFmMTA4OCIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1Mjg0MDExNX0.8WaLwzYKPLzjFCTEm3aSr4Vc24TUEmePYwXIXGICsm0
+2019-03-17 18:28:35,596 :: INFO: CPM API worker initialized
+2019-03-17 18:28:35,596 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
+2019-03-17 18:28:36,282 :: DEBUG: Data: None
+2019-03-17 18:28:36,283 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/241/snapshots/copy_to_s3/
+2019-03-17 18:28:36,881 :: DEBUG: Data: None
+2019-03-17 18:28:36,881 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/policies/10/copy_to_s3/
+2019-03-17 18:28:37,951 :: DEBUG: Data: None
+2019-03-17 18:28:37,951 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/s3_repositories/1/
+2019-03-17 18:28:38,532 :: DEBUG: Data: None
+2019-03-17 18:28:38,532 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/settings/identifier/
+2019-03-17 18:28:39,111 :: DEBUG: Data: None
