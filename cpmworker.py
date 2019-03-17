@@ -80,12 +80,18 @@ class CPMworker:
     API_TOKEN_OBTAIN = "token/obtain/api_key/"
     API_TOKEN_REFRESH = "token/refresh/"
     API_USERS = "users/"
-
-    API_POLICY = "policies/"
     API_ACCOUNTS = "accounts/"
     API_ACCOUNTSADD = "accounts/backup/"
+    API_GET_S3_BACKUPS="backups/{backup_id}/snapshots/copy_to_s3/"
+    API_POLICY = "policies/"
+    API_POLICY_S3 = "policies/{id}/copy_to_s3/"
     API_SCHEDULES = "schedules/"
+    API_S3_REPO = "s3_repositories/{id}/"
+
     API_GET_SCAN = "/user/settings/scan_resources"
+    # todo remove this
+
+    API_BACKUP_RECORDS = "backups/"
 
     HEADER_ACCEPT = "application/json; version: 1.1"
     HEADER_AUTHORIZATION = "Bearer {access_token}"
@@ -170,7 +176,6 @@ class CPMworker:
         logger.warning('Searching for user "{0}" failed. User not found.'.format(name))
         return None
 
-
     # todo implement function List Accounts returns json object
     def describe_accounts(self):
         """
@@ -199,12 +204,12 @@ class CPMworker:
 
     # todo implement function Remove Accounts
 
-    # todo implement function List Policies
     def describe_policies(self):
 
         return self.send(
             self.URL_API.format(host=self.host, api_point=self.API_POLICY),
         )
+
     # todo implement function Create Policies
     def create_policy(self, **kwarg):
         """
@@ -218,6 +223,35 @@ class CPMworker:
             self.URL_API.format(host=self.host, api_point=self.API_ACCOUNTSADD),
             {'data_policies_create': data_policies_create},
             'post'
+        )
+
+    def describe_policy_s3(self, id):
+
+        return self.send(
+            self.URL_API.format(host=self.host, api_point=self.API_POLICY_S3.format(id=id)),
+        )
+
+    def describe_S3_backups(self):
+        policies = self.list_backups()
+        for policy in policies:
+            if policy['s3_copy_status']['status'] == 'S':
+                print policy
+        return
+
+    def describe_S3_backup(self, id):
+        return self.send(
+            self.URL_API.format(host=self.host, api_point=self.API_GET_S3_BACKUPS.format(backup_id=id))
+        )
+
+    def describe_S3_repo(self, id):
+        return self.send(
+            self.URL_API.format(host=self.host, api_point=self.API_S3_REPO.format(id=id))
+        )
+
+
+    def list_backups(self):
+        return self.send(
+            self.URL_API.format(host=self.host, api_point=self.API_BACKUP_RECORDS)
         )
 
     # todo implement function Remove Policies
@@ -248,7 +282,7 @@ class CPMworker:
         """
         logger.debug('Opening {0}'.format(url))
 
-        print(self.headers)
+        #print(self.headers)
         if method == 'post':
             response = requests.post(
             url=url,
