@@ -1,199 +1,136 @@
-2019-02-13 14:00:57,609 :: DEBUG: Opening https://18.235.133.229/api/token/obtain/api_key/
-2019-02-13 14:00:58,516 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede350214ede059b736c2010754906421bd95c8c742178f696ac395d769f5304cffa30ee'}
-2019-02-13 14:00:58,516 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiI3YTFlZmQyOGE4NDg0M2NhOGY1MTQ4YmU3ZTQ2YTdlNyIsImFjYyI6IkFQSSIsImV4cCI6MTU1MDA1OTI1OH0.c1YcCRrKS-uUR-Wlzz6GuEzVSnqQ71Bb50I_s35cCkE
-2019-02-13 14:00:58,516 :: INFO: CPM API worker initialized
-2019-02-13 14:00:58,516 :: DEBUG: Opening https://18.235.133.229/api/users/
-2019-02-13 14:00:59,131 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede350214ede059b736c2010754906421bd95c8c742178f696ac395d769f5304cffa30ee'}
-2019-02-13 14:00:59,132 :: INFO: Executed get_users()
-2019-02-13 14:00:59,132 :: DEBUG: Executed get_users(): [{u'username': u'grizzlyroot', u'id': 1, u'email': u''}, {u'username': u'grizzlyroot2', u'profile': {u'max_rds_gib': None, u'max_dynamodb_gib': None, u'domain_name': None, u'max_instances': None, u'max_independent_ebs_gib': None, u'max_redshift_gib': None, u'allow_file_level_recovery': True, u'is_managed_user': True, u'max_accounts': None, u'is_external_authentication': False}, u'id': 2, u'email': u''}, {u'username': u'jopa', u'profile': {u'max_rds_gib': None, u'max_dynamodb_gib': None, u'domain_name': None, u'max_instances': None, u'max_independent_ebs_gib': None, u'max_redshift_gib': None, u'allow_file_level_recovery': True, u'is_managed_user': True, u'max_accounts': None, u'is_external_authentication': False}, u'id': 3, u'email': u''}, {u'username': u'jopamaster', u'profile': {u'max_rds_gib': None, u'applied_managed_users': [], u'max_dynamodb_gib': None, u'domain_name': None, u'max_instances': None, u'max_independent_ebs_gib': None, u'max_redshift_gib': None, u'allow_file_level_recovery': True, u'is_managed_user': False, u'max_accounts': None, u'is_external_authentication': False}, u'id': 4, u'email': u''}, {u'username': u'man1', u'profile': {u'max_rds_gib': None, u'max_dynamodb_gib': None, u'domain_name': None, u'max_instances': None, u'max_independent_ebs_gib': None, u'max_redshift_gib': None, u'allow_file_level_recovery': True, u'is_managed_user': True, u'max_accounts': None, u'is_external_authentication': False}, u'id': 5, u'email': u''}]
-2019-02-13 14:01:18,326 :: DEBUG: Opening https://18.235.133.229/api/token/obtain/api_key/
-2019-02-13 14:01:19,256 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede350214ede059b736c2010754906421bd95c8c742178f696ac395d769f5304cffa30ee'}
-2019-02-13 14:01:19,257 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiIyZjJiYTIwZTc3NWM0MzNkODY1N2VhMTE2ZjU3ZGMzMSIsImFjYyI6IkFQSSIsImV4cCI6MTU1MDA1OTI3OX0.3EIHw76uWqkHU9r7j2TQDpCDnKcD56Rkp8fQbfrMqhs
-2019-02-13 14:01:19,257 :: INFO: CPM API worker initialized
-2019-02-13 14:01:19,257 :: DEBUG: Opening https://18.235.133.229/api/accounts/
-2019-02-13 14:01:19,872 :: DEBUG: Data: None
-2019-02-13 14:01:19,874 :: DEBUG: Executed get_accounts(): [{u'scan_regions': [2], u'name': u'main_backup3', u'capture_vpcs': True, u'scan_tagged_resources': False, u'authentication': u'R', u'is_dr_account': False, u'user': 1, u'id': 2}, {u'name': u'dr', u'allow_deleting_snapshots': True, u'authentication': u'R', u'is_dr_account': True, u'user': 1, u'id': 3}, {u'scan_regions': [2], u'name': u'esche', u'capture_vpcs': True, u'scan_tagged_resources': True, u'authentication': u'R', u'is_dr_account': False, u'user': 1, u'id': 4}, {u'scan_regions': [2], u'name': u'grizzly2_tied', u'capture_vpcs': True, u'assume_from_account': 2, u'scan_tagged_resources': False, u'authentication': u'A', u'role_name': u'Mikhail.Topskiy', u'is_dr_account': False, u'account_number': u'124556737267', u'external_id': None, u'id': 5, u'user': 2}, {u'scan_regions': [2], u'aws_access_key': u'AKIAJWLC2F2AIAH5POJQ', u'name': u'key', u'capture_vpcs': True, u'scan_tagged_resources': False, u'authentication': u'C', u'is_dr_account': False, u'user': 1, u'id': 6}, {u'name': u'to_serg', u'assume_from_account': 2, u'allow_deleting_snapshots': True, u'authentication': u'A', u'role_name': u'Mikhail.Topskiy', u'is_dr_account': True, u'user': 1, u'external_id': None, u'id': 7, u'account_number': u'124556737267'}, {u'scan_regions': [2], u'name': u'xpg-remote', u'capture_vpcs': True, u'assume_from_account': 2, u'scan_tagged_resources': False, u'authentication': u'A', u'role_name': u'XPGCPM', u'is_dr_account': False, u'account_number': u'934264962191', u'external_id': None, u'id': 8, u'user': 1}]
-2019-03-10 17:13:00,707 :: DEBUG: Opening https://ec2-54-90-178-204.compute-1.amazonaws.com/api/token/obtain/api_key/
-2019-03-10 17:16:41,930 :: DEBUG: Opening https://ec2-54-90-178-204.compute-1.amazonaws.com/api/token/obtain/api_key/
-2019-03-10 17:16:42,878 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b0d1df1defa199b4a37569af9dbf2cf5c4ede059b736c20101bc5e2e41495f291c2c822a4d14661782d4cd9bfe134880f'}
-2019-03-10 17:16:42,878 :: ERROR: Error in response: Status:  "400", should be "200" OK.
-{"errors":[{"message":"No user found for given API key.","code":"invalid"}]}
-<Response [400]>
-2019-03-10 17:18:33,125 :: DEBUG: Opening https://ec2-54-90-178-204.compute-1.amazonaws.com/api/token/obtain/api_key/
-2019-03-10 17:18:34,092 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b0d1df1defa199b4a37569af9dbf2cf5c4ede059b736c20101bc5e2e41495f291c2c822a4d14661782d4cd9bfe134880f'}
-2019-03-10 17:18:34,092 :: ERROR: Error in response: Status:  "400", should be "200" OK.
-{"errors":[{"message":"No user found for given API key.","code":"invalid"}]}
-<Response [400]>
-2019-03-10 17:20:36,676 :: DEBUG: Opening https://ec2-54-90-178-204.compute-1.amazonaws.com/api/token/obtain/api_key/
-2019-03-10 17:20:37,792 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b0d1df1defa199b4a37569af9dbf2cf5c4ede059b736c2010576667237fc40b8e1bd5e65690d5204019dbe4141167bea2'}
-2019-03-10 17:20:37,792 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiJmNzMzZDVmMTJlYTg0ODYzYWQ0ZDRjYjY2NmJhODY5ZiIsImFjYyI6IkFQSSIsImV4cCI6MTU1MjIzMTIzN30.on4mTpBc_NnQxwFeQgoJ78zA3VQnrvWBcmaYdVRu7ig
-2019-03-10 17:20:37,792 :: INFO: CPM API worker initialized
-2019-03-10 17:20:37,793 :: DEBUG: Opening https://ec2-54-90-178-204.compute-1.amazonaws.com/api/accounts/
-2019-03-10 17:20:38,757 :: DEBUG: Data: None
-2019-03-10 17:20:38,757 :: DEBUG: Executed get_accounts(): [{u'scan_regions': [2], u'name': u'main', u'capture_vpcs': True, u'scan_tagged_resources': False, u'authentication': u'R', u'is_dr_account': False, u'user': 1, u'id': 2}]
-2019-03-10 17:22:28,576 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-10 17:22:29,622 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-10 17:22:29,622 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiIwNTYzYmRhZTgyYjY0YTk4YWQ3YmQ0M2FlODc2YjFhZiIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjIzMTM0OX0.jssuGI0MAmz_1ziBBDNeRH4HkDcQUhzTlVDM6qUoFiw
-2019-03-10 17:22:29,622 :: INFO: CPM API worker initialized
-2019-03-10 17:22:29,622 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/accounts/
-2019-03-10 17:22:30,736 :: DEBUG: Data: None
-2019-03-10 17:22:30,736 :: DEBUG: Executed get_accounts(): [{u'scan_regions': [12], u'name': u'main', u'capture_vpcs': True, u'scan_tagged_resources': False, u'authentication': u'R', u'is_dr_account': False, u'user': 1, u'id': 1}, {u'name': u'DRserg', u'assume_from_account': 1, u'allow_deleting_snapshots': True, u'authentication': u'A', u'role_name': u'Mikhail.Topskiy', u'is_dr_account': True, u'user': 1, u'external_id': None, u'id': 3, u'account_number': u'124556737267'}, {u'scan_regions': [1, 8, 12, 13], u'aws_access_key': u'AKIAISCZCUTMTMP23XCA', u'name': u'key_main', u'capture_vpcs': False, u'scan_tagged_resources': True, u'authentication': u'C', u'is_dr_account': False, u'user': 1, u'id': 4}]
-2019-03-10 17:32:53,069 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-10 17:32:53,959 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-10 17:32:53,960 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiIzMzRkNzU2YjFkOTU0NWMwYmVhYWFhOGYwZDE1ZTQ1NyIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjIzMTk3M30.LPjBp7esz9GpxKc6iePDciABALsVJKyF2Yn5-8gAU14
-2019-03-10 17:32:53,960 :: INFO: CPM API worker initialized
-2019-03-10 17:32:53,960 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/accounts/
-2019-03-10 17:32:54,559 :: DEBUG: Data: None
-2019-03-10 17:32:54,559 :: DEBUG: Executed get_accounts(): [{u'scan_regions': [12], u'name': u'main', u'capture_vpcs': True, u'scan_tagged_resources': False, u'authentication': u'R', u'is_dr_account': False, u'user': 1, u'id': 1}, {u'name': u'DRserg', u'assume_from_account': 1, u'allow_deleting_snapshots': True, u'authentication': u'A', u'role_name': u'Mikhail.Topskiy', u'is_dr_account': True, u'user': 1, u'external_id': None, u'id': 3, u'account_number': u'124556737267'}, {u'scan_regions': [1, 8, 12, 13], u'aws_access_key': u'AKIAISCZCUTMTMP23XCA', u'name': u'key_main', u'capture_vpcs': False, u'scan_tagged_resources': True, u'authentication': u'C', u'is_dr_account': False, u'user': 1, u'id': 4}]
-2019-03-10 17:32:54,559 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-10 17:32:55,187 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-10 17:32:55,187 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiIzNWZjNGM2Nzg0NDc0M2RkOTVmZjM1ZmFhMjhjNDYyYSIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjIzMTk3NH0.F_JMiBpebRqK2zeVCWvL_lR2c1xSVYKaYg1h1Bs_iP0
-2019-03-10 17:32:55,187 :: INFO: CPM API worker initialized
-2019-03-10 17:32:55,187 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
-2019-03-10 17:32:55,898 :: DEBUG: Data: None
-2019-03-17 17:25:01,211 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 17:25:02,315 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 17:25:02,315 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiI2MTRmNDkzYTNlYjE0MWY4OGQzNmJmNTFkYjRlM2NjNSIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjgzNjMwMn0.Qj_VDv9QEqUK6t1J4YHJVv8e19Uc1KNO2yghjfNbb7Q
-2019-03-17 17:25:02,315 :: INFO: CPM API worker initialized
-2019-03-17 17:25:02,315 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/accounts/
-2019-03-17 17:25:03,500 :: DEBUG: Data: None
-2019-03-17 17:25:03,502 :: DEBUG: Executed get_accounts(): [{u'scan_regions': [12], u'name': u'main', u'capture_vpcs': True, u'scan_tagged_resources': False, u'authentication': u'R', u'is_dr_account': False, u'user': 1, u'id': 1}, {u'name': u'DRserg', u'assume_from_account': 1, u'allow_deleting_snapshots': True, u'authentication': u'A', u'role_name': u'Mikhail.Topskiy', u'is_dr_account': True, u'user': 1, u'external_id': None, u'id': 3, u'account_number': u'124556737267'}, {u'scan_regions': [1, 8, 12, 13], u'aws_access_key': u'AKIAISCZCUTMTMP23XCA', u'name': u'key_main', u'capture_vpcs': False, u'scan_tagged_resources': True, u'authentication': u'C', u'is_dr_account': False, u'user': 1, u'id': 4}]
-2019-03-17 17:25:03,503 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 17:25:04,141 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 17:25:04,145 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiI5ZDY3MzAwOTE4MjY0ZWMwYjNmZjU4MWI1NjE4MWNiYyIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjgzNjMwM30.N_vjThGce5bDRqLqwx_1x4r7jCI-JHDJkiqJpDJqL0s
-2019-03-17 17:25:04,145 :: INFO: CPM API worker initialized
-2019-03-17 17:25:04,145 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
-2019-03-17 17:25:04,882 :: DEBUG: Data: None
-2019-03-17 17:25:04,897 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 17:25:05,562 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 17:25:05,562 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiJiZGE1OTRkZmM4YmM0YzUwYWM0OTAxMTU1MTU4NDI2MSIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjgzNjMwNX0.RRITvQlDfZPHpPr8S69beT7KcQNHc31Xkk9y4S8SCLc
-2019-03-17 17:25:05,562 :: INFO: CPM API worker initialized
-2019-03-17 17:25:05,562 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/policies/
-2019-03-17 17:25:06,226 :: DEBUG: Data: None
-2019-03-17 17:26:40,457 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 17:26:41,375 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 17:26:41,375 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiJkYmRiYmY0NGY4Y2Y0MTgzYTRhYTcwNDliZDYxZmVlNSIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjgzNjQwMX0.pb4JlmwvIc0UbNchfcCsgvvIBN78I7B0xTJApZDHRhI
-2019-03-17 17:26:41,375 :: INFO: CPM API worker initialized
-2019-03-17 17:26:41,375 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
-2019-03-17 17:26:42,572 :: DEBUG: Data: None
-2019-03-17 17:26:42,588 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 17:26:43,233 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 17:26:43,233 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiIyMTc4ZThhNWEwYTg0Y2U1OWU4ODU3Zjk3OTFkMTg3MyIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjgzNjQwM30.DYhWRLkTn3Z8duV-4Aj6FT8yiKqYr_d1XEPphsuWn6s
-2019-03-17 17:26:43,233 :: INFO: CPM API worker initialized
-2019-03-17 17:26:43,233 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/accounts/
-2019-03-17 17:26:43,907 :: DEBUG: Data: None
-2019-03-17 17:26:43,907 :: DEBUG: Executed get_accounts(): [{u'scan_regions': [12], u'name': u'main', u'capture_vpcs': True, u'scan_tagged_resources': False, u'authentication': u'R', u'is_dr_account': False, u'user': 1, u'id': 1}, {u'name': u'DRserg', u'assume_from_account': 1, u'allow_deleting_snapshots': True, u'authentication': u'A', u'role_name': u'Mikhail.Topskiy', u'is_dr_account': True, u'user': 1, u'external_id': None, u'id': 3, u'account_number': u'124556737267'}, {u'scan_regions': [1, 8, 12, 13], u'aws_access_key': u'AKIAISCZCUTMTMP23XCA', u'name': u'key_main', u'capture_vpcs': False, u'scan_tagged_resources': True, u'authentication': u'C', u'is_dr_account': False, u'user': 1, u'id': 4}]
-2019-03-17 17:26:43,908 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 17:26:44,552 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 17:26:44,552 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiIyYTM1NDQ2NzJjOGE0YTVmODdlMzRjYzE3YjgzOTU5ZSIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjgzNjQwNH0.mnMugvPkgeAHJtElVcPpxHOIRGV3zelTwNwovge2PJg
-2019-03-17 17:26:44,553 :: INFO: CPM API worker initialized
-2019-03-17 17:26:44,553 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
-2019-03-17 17:26:45,278 :: DEBUG: Data: None
-2019-03-17 17:32:05,101 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 17:32:06,038 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 17:32:06,038 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiI2MjUzYjI5MTdiYzA0MjhjODkwZmY3NGI1NzlkZjM1YiIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjgzNjcyNX0.korFI_EEclIk7hnzPD_p3PmNL918_a1MOcuvKNfmbwA
-2019-03-17 17:32:06,038 :: INFO: CPM API worker initialized
-2019-03-17 17:32:06,038 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
-2019-03-17 17:32:06,798 :: DEBUG: Data: None
-2019-03-17 17:32:06,813 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 17:32:07,480 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 17:32:07,480 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiJhNGFkN2ZjMThlNDM0Yjg4OTMwODliMzkwMWM5ODZjYiIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjgzNjcyN30.SdImznAos8FL11V7W2DxjViD4hHNh89JJr5eAljADzQ
-2019-03-17 17:32:07,480 :: INFO: CPM API worker initialized
-2019-03-17 17:32:07,480 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/accounts/
-2019-03-17 17:32:08,157 :: DEBUG: Data: None
-2019-03-17 17:32:08,157 :: DEBUG: Executed get_accounts(): [{u'scan_regions': [12], u'name': u'main', u'capture_vpcs': True, u'scan_tagged_resources': False, u'authentication': u'R', u'is_dr_account': False, u'user': 1, u'id': 1}, {u'name': u'DRserg', u'assume_from_account': 1, u'allow_deleting_snapshots': True, u'authentication': u'A', u'role_name': u'Mikhail.Topskiy', u'is_dr_account': True, u'user': 1, u'external_id': None, u'id': 3, u'account_number': u'124556737267'}, {u'scan_regions': [1, 8, 12, 13], u'aws_access_key': u'AKIAISCZCUTMTMP23XCA', u'name': u'key_main', u'capture_vpcs': False, u'scan_tagged_resources': True, u'authentication': u'C', u'is_dr_account': False, u'user': 1, u'id': 4}]
-2019-03-17 17:32:08,158 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 17:32:23,430 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 17:32:23,430 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiI1ZGMxNmIwNzRlMzc0ODMzOWIwNzk4NTFjMzYyNDNjMiIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjgzNjc0M30.Y85DBS2ei_1uZ0pCl8TOFuWVafkO5xVi34iT_1Fj9P4
-2019-03-17 17:32:23,430 :: INFO: CPM API worker initialized
-2019-03-17 17:32:23,431 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
-2019-03-17 17:32:24,161 :: DEBUG: Data: None
-2019-03-17 17:32:38,520 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 17:32:39,467 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 17:32:39,467 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiIxNzUxMTU0YjY3NWE0ODY5ODY3NTAyNzlmYjZkYjExYiIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjgzNjc1OX0.TL4UD34dCamIvVAFDSmoG4jpAstnIoB1BLu4E_rse4o
-2019-03-17 17:32:39,467 :: INFO: CPM API worker initialized
-2019-03-17 17:32:39,467 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
-2019-03-17 17:32:40,191 :: DEBUG: Data: None
-2019-03-17 17:32:40,196 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 17:32:40,822 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 17:32:40,822 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiIzMWVjYjM4MjM1ZWE0MjZiOWVmNjhhOGY1NGIwNmZiNyIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjgzNjc2MH0.hPM1IJGghW0BuDan3yrAxFTvDydm4ZJ1vEX4te77DA0
-2019-03-17 17:32:40,822 :: INFO: CPM API worker initialized
-2019-03-17 17:32:40,822 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/accounts/
-2019-03-17 17:32:41,473 :: DEBUG: Data: None
-2019-03-17 17:32:41,473 :: DEBUG: Executed get_accounts(): [{u'scan_regions': [12], u'name': u'main', u'capture_vpcs': True, u'scan_tagged_resources': False, u'authentication': u'R', u'is_dr_account': False, u'user': 1, u'id': 1}, {u'name': u'DRserg', u'assume_from_account': 1, u'allow_deleting_snapshots': True, u'authentication': u'A', u'role_name': u'Mikhail.Topskiy', u'is_dr_account': True, u'user': 1, u'external_id': None, u'id': 3, u'account_number': u'124556737267'}, {u'scan_regions': [1, 8, 12, 13], u'aws_access_key': u'AKIAISCZCUTMTMP23XCA', u'name': u'key_main', u'capture_vpcs': False, u'scan_tagged_resources': True, u'authentication': u'C', u'is_dr_account': False, u'user': 1, u'id': 4}]
-2019-03-17 17:32:41,474 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 17:32:42,115 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 17:32:42,115 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiJiNGM2OWVmMDdmYjY0N2NjODRjNjc1NzAwMTcxNTMxOCIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjgzNjc2MX0.dfrYh8dUXYPGxBOC1e5lKrOE4SVM65j87ZBC-Cu4DFI
-2019-03-17 17:32:42,115 :: INFO: CPM API worker initialized
-2019-03-17 17:32:42,115 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
-2019-03-17 17:32:42,854 :: DEBUG: Data: None
-2019-03-17 17:33:02,446 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 17:33:03,440 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 17:33:03,441 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiIyMGFhYWMxY2I1YjQ0MjljOGJlMDU0Y2ExOWYzN2YyNSIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjgzNjc4M30.iTquP6aIwadur-qgZkMbr06x6EA72WaK3gLo0uYk9gQ
-2019-03-17 17:33:03,441 :: INFO: CPM API worker initialized
-2019-03-17 17:33:03,441 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
-2019-03-17 17:33:04,157 :: DEBUG: Data: None
-2019-03-17 17:33:04,160 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 17:33:04,783 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 17:33:04,783 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiJlMjRkM2FkYzE4ODg0YTAwYWM3YzA2MmNjYTM1ZGY2NCIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjgzNjc4NH0.P3P1fWG-WLuGxqt8oCC50-lDck7DeW7aLzpAPExUeqg
-2019-03-17 17:33:04,783 :: INFO: CPM API worker initialized
-2019-03-17 17:33:04,783 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
-2019-03-17 17:33:05,507 :: DEBUG: Data: None
-2019-03-17 17:33:16,516 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 17:33:17,456 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 17:33:17,456 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiIyOWEzMTdhNThkODM0ZDFlODg4MDNiMzU0OTA5NDc3OSIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjgzNjc5N30.s4VgLnYVouxSj-DVeVJfB2oXPRCDiFzvY45s2cBTjS0
-2019-03-17 17:33:17,456 :: INFO: CPM API worker initialized
-2019-03-17 17:33:17,457 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
-2019-03-17 17:33:18,201 :: DEBUG: Data: None
-2019-03-17 17:42:01,665 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 17:42:02,540 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 17:42:02,540 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiIzOGE2MGQ1NjY5ZDI0NGNkOWIwZTdlMDhiZDk0NjMxNSIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjgzNzMyMn0.ir5iNEyZR0ooTlmVCxlu8_DXpH9xMnF_3OhUkv9wv4c
-2019-03-17 17:42:02,540 :: INFO: CPM API worker initialized
-2019-03-17 17:42:02,540 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
-2019-03-17 17:42:03,211 :: DEBUG: Data: None
-2019-03-17 17:42:03,213 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/241/snapshots/copy_to_s3/
-2019-03-17 17:42:03,828 :: DEBUG: Data: None
-2019-03-17 17:43:10,959 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 17:43:11,828 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 17:43:11,828 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiIyYmY5ZjY5ODJlYTg0YzRlYjM3NWU5ZGEyZTAwNmMyMiIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjgzNzM5MX0.jsxwyv1PRjd5eZV0RcKCsRB33seCU7yIasgcuhudpfg
-2019-03-17 17:43:11,828 :: INFO: CPM API worker initialized
-2019-03-17 17:43:11,828 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
-2019-03-17 17:43:12,522 :: DEBUG: Data: None
-2019-03-17 17:43:12,526 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/241/snapshots/copy_to_s3/
-2019-03-17 17:43:13,144 :: DEBUG: Data: None
-2019-03-17 18:03:46,413 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 18:03:47,334 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 18:03:47,334 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiJkNjlkZWI3MDZiNTg0MDg1ODRhODA4NzIyMDljNTE5YiIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjgzODYyN30.hJczN4s0zNqJotGo3_fQ_iGczh51EzBN2oAlsXFq9gQ
-2019-03-17 18:03:47,334 :: INFO: CPM API worker initialized
-2019-03-17 18:03:47,335 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
-2019-03-17 18:03:48,078 :: DEBUG: Data: None
-2019-03-17 18:03:48,079 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/241/snapshots/copy_to_s3/
-2019-03-17 18:03:48,746 :: DEBUG: Data: None
-2019-03-17 18:03:48,747 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/policies/10/copy_to_s3/
-2019-03-17 18:03:49,770 :: DEBUG: Data: None
-2019-03-17 18:09:03,993 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 18:09:04,924 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 18:09:04,924 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiI4N2M5NGVlMjE0NDI0NzE2YWEyOTkyYTM4YzUxOTVhYiIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjgzODk0NH0.TIpb-kjXPCpnYC8UsNeL-aFij1A2iArk80kH5HvjWyc
-2019-03-17 18:09:04,924 :: INFO: CPM API worker initialized
-2019-03-17 18:09:04,924 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
-2019-03-17 18:09:05,638 :: DEBUG: Data: None
-2019-03-17 18:09:05,641 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/241/snapshots/copy_to_s3/
-2019-03-17 18:09:06,305 :: DEBUG: Data: None
-2019-03-17 18:09:06,306 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/policies/10/copy_to_s3/
-2019-03-17 18:09:07,375 :: DEBUG: Data: None
-2019-03-17 18:09:07,375 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/s3_repositories/1/
-2019-03-17 18:09:08,026 :: DEBUG: Data: None
-2019-03-17 18:28:34,677 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
-2019-03-17 18:28:35,595 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
-2019-03-17 18:28:35,596 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiJhOGZhNjk5Y2RmNWE0YmZiYmEwM2JmYTYwYjFmMTA4OCIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1Mjg0MDExNX0.8WaLwzYKPLzjFCTEm3aSr4Vc24TUEmePYwXIXGICsm0
-2019-03-17 18:28:35,596 :: INFO: CPM API worker initialized
-2019-03-17 18:28:35,596 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
-2019-03-17 18:28:36,282 :: DEBUG: Data: None
-2019-03-17 18:28:36,283 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/241/snapshots/copy_to_s3/
-2019-03-17 18:28:36,881 :: DEBUG: Data: None
-2019-03-17 18:28:36,881 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/policies/10/copy_to_s3/
-2019-03-17 18:28:37,951 :: DEBUG: Data: None
-2019-03-17 18:28:37,951 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/s3_repositories/1/
-2019-03-17 18:28:38,532 :: DEBUG: Data: None
-2019-03-17 18:28:38,532 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/settings/identifier/
-2019-03-17 18:28:39,111 :: DEBUG: Data: None
+2019-03-18 19:35:00,407 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
+2019-03-18 19:35:01,328 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
+2019-03-18 19:35:01,328 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiIyNTg0NmRiNTUxNGM0MDFkYWVjNDNiOWJkM2M2ODJiNCIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjkzMDUwMX0.B9tzfn59Qaa7804vyedTsLZ0uJnAMVSpnC2PWqFxd94
+2019-03-18 19:35:01,329 :: INFO: CPM API worker initialized
+2019-03-18 19:35:01,329 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
+2019-03-18 19:35:02,051 :: DEBUG: Data: None
+2019-03-18 19:35:07,395 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
+2019-03-18 19:35:08,263 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
+2019-03-18 19:35:08,263 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiI5YzhmNTRmZDkyZTg0NDcxOGE1OTRhZWZiMTFlYjVjNSIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjkzMDUwOH0.v8KcLuNZNV2YIh6ZRL22W53k4pv-zNZAiBCUZVzzy5k
+2019-03-18 19:35:08,263 :: INFO: CPM API worker initialized
+2019-03-18 19:35:08,263 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
+2019-03-18 19:35:08,982 :: DEBUG: Data: None
+2019-03-18 19:43:18,348 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
+2019-03-18 19:43:19,272 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
+2019-03-18 19:43:19,272 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiI2YTE4YTM2ZDRlOTM0NTM3ODFmYzdiNDU5ZjdjMzk2MCIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjkzMDk5OX0.BDp0lB0Ie3Q4oGeOxPgkWV3Qk6n7l6lZa-V0l6ehJVA
+2019-03-18 19:43:19,272 :: INFO: CPM API worker initialized
+2019-03-18 19:43:19,272 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
+2019-03-18 19:43:20,010 :: DEBUG: Data: None
+2019-03-18 19:44:27,206 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
+2019-03-18 19:44:28,108 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
+2019-03-18 19:44:28,108 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiJjODgzM2Y0YTM3NWQ0YTNkYmM1YWUwZjk2MzZiMDM4ZiIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjkzMTA2N30.ejx2lQmCWrWQElN5IS-CfhUcLwEAyYuk288rAVjt71Q
+2019-03-18 19:44:28,108 :: INFO: CPM API worker initialized
+2019-03-18 19:44:48,325 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
+2019-03-18 19:44:49,250 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
+2019-03-18 19:44:49,250 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiJjMTc5ZjgxOGUwZGQ0NDAwYTlkOTc5YzhmNTg5NmFlZSIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjkzMTA4OX0.1ZXVZxgiUeTs1sXPmT1oahCs_WLBmkUcSERBqXGUeUk
+2019-03-18 19:44:49,250 :: INFO: CPM API worker initialized
+2019-03-18 19:44:49,250 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
+2019-03-18 19:44:49,999 :: DEBUG: Data: None
+2019-03-18 19:44:55,862 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
+2019-03-18 19:44:56,802 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
+2019-03-18 19:44:56,802 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiI5NWI0OTQwMDg5MzM0ZjY3YjRlNzJmN2MwYTllY2Q5MyIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjkzMTA5Nn0.wUn0v0ngjkG92oLegzAIB9WMDV1hiU1aiHaNdMOaXnc
+2019-03-18 19:44:56,802 :: INFO: CPM API worker initialized
+2019-03-18 19:44:56,802 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
+2019-03-18 19:44:57,539 :: DEBUG: Data: None
+2019-03-18 19:48:01,392 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
+2019-03-18 19:48:02,290 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
+2019-03-18 19:48:02,290 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiI0Zjk0NDMwZmUwZWE0ZTIwYTM5M2E5NzgzZWQ2NjFmYiIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjkzMTI4Mn0.WoHIcJszzsdWlZ4Atetd1_YZf6KlIqmq5ZuIcNgzKR8
+2019-03-18 19:48:02,290 :: INFO: CPM API worker initialized
+2019-03-18 19:48:02,290 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
+2019-03-18 19:48:02,986 :: DEBUG: Data: None
+2019-03-18 19:48:16,335 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
+2019-03-18 19:48:17,289 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
+2019-03-18 19:48:17,289 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiI4MWVhOTZhYzM1OGQ0ZDlkOGUwNGVhYWY1YTkyMGFhZSIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjkzMTI5N30.V2fbJ0lBNbd4AW8T7D-dQIv72ueIU-tpRcPuN-TaUNk
+2019-03-18 19:48:17,289 :: INFO: CPM API worker initialized
+2019-03-18 19:48:17,289 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
+2019-03-18 19:48:18,009 :: DEBUG: Data: None
+2019-03-18 19:53:02,230 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
+2019-03-18 19:53:03,099 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
+2019-03-18 19:53:03,099 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiI1MWY2N2NkNGQ1NzU0NTFmOTZjMDIwYjQ0YzcwYzBmYSIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjkzMTU4Mn0.BFZ6ixdiyV4ANd1-bpBnZnIYQCFpQ7cbQejPhBl534A
+2019-03-18 19:53:03,099 :: INFO: CPM API worker initialized
+2019-03-18 19:53:03,101 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
+2019-03-18 19:53:03,786 :: DEBUG: Data: None
+2019-03-18 19:53:25,351 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
+2019-03-18 19:53:26,229 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
+2019-03-18 19:53:26,229 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiJiY2UwNDY3ZjVhMDE0ZDdjYTEzMzEyYTQ0M2RlMGU3YSIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjkzMTYwNn0.nEqcSwe8dvlvQA7ZDq0yNppNAeC-C_I37ii1QsrhTNQ
+2019-03-18 19:53:26,229 :: INFO: CPM API worker initialized
+2019-03-18 19:53:26,229 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
+2019-03-18 19:53:26,911 :: DEBUG: Data: None
+2019-03-18 19:58:20,013 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
+2019-03-18 19:58:20,908 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
+2019-03-18 19:58:20,908 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiJjN2ZjMzkzYTExNjQ0ZDc2YTA5NDZjMzUwYjE4YmMyMCIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjkzMTkwMH0.2d7mDYrMDMogTaQPZrJmL-5z7eOZAUdiXwV4JO1AHhc
+2019-03-18 19:58:20,908 :: INFO: CPM API worker initialized
+2019-03-18 19:58:20,908 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
+2019-03-18 19:58:21,598 :: DEBUG: Data: None
+2019-03-18 19:59:31,006 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
+2019-03-18 19:59:31,904 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
+2019-03-18 19:59:31,905 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiIyYzE2YjQ5YTYwYTA0M2E4OGUwZWEyNTQ1MTVkMjE2OSIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjkzMTk3MX0.c0fxrZ-lxGDJSXaFl6wlo_7IFL7Lm5gZuwB_s6PDVwE
+2019-03-18 19:59:31,905 :: INFO: CPM API worker initialized
+2019-03-18 19:59:31,905 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
+2019-03-18 19:59:32,608 :: DEBUG: Data: None
+2019-03-18 20:02:29,579 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
+2019-03-18 20:02:30,467 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
+2019-03-18 20:02:30,469 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiIwOGNhNTY3N2U0MTQ0YTRiYTJiODM0MDcwNTc0NGI4YyIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjkzMjE1MH0.sw1z_WlZOz9FZZj3rmTmKWan-eGQMVlq_z_6JmlnruU
+2019-03-18 20:02:30,469 :: INFO: CPM API worker initialized
+2019-03-18 20:02:30,469 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
+2019-03-18 20:02:31,160 :: DEBUG: Data: None
+2019-03-18 20:02:31,161 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/237/snapshots/copy_to_s3/
+2019-03-18 20:02:31,783 :: DEBUG: Data: None
+2019-03-18 20:02:31,783 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/238/snapshots/copy_to_s3/
+2019-03-18 20:02:32,506 :: DEBUG: Data: None
+2019-03-18 20:02:32,507 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/239/snapshots/copy_to_s3/
+2019-03-18 20:02:33,109 :: DEBUG: Data: None
+2019-03-18 20:02:33,111 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/241/snapshots/copy_to_s3/
+2019-03-18 20:02:33,713 :: DEBUG: Data: None
+2019-03-18 20:03:26,970 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
+2019-03-18 20:03:27,865 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
+2019-03-18 20:03:27,865 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiI4OTg4MjgxN2Y5MzE0NmNlODVlYjFiYjVjYWY4Y2QyMCIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjkzMjIwN30.qFb_1uMyvviPIZpDmVhXpQ1PwNLviExzRxa7NcWr8J4
+2019-03-18 20:03:27,865 :: INFO: CPM API worker initialized
+2019-03-18 20:03:27,865 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
+2019-03-18 20:03:28,532 :: DEBUG: Data: None
+2019-03-18 20:03:28,533 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/237/snapshots/copy_to_s3/
+2019-03-18 20:03:29,127 :: DEBUG: Data: None
+2019-03-18 20:07:03,371 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
+2019-03-18 20:07:04,256 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
+2019-03-18 20:07:04,256 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiJmOTIxZGU4YWU2ZWY0NzljYmVlNmFiZDEwZDZlZjZiZSIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjkzMjQyNH0.6ATuB5_DaXivdT74-hWlN9KHNf6O5KBidto560ciZNQ
+2019-03-18 20:07:04,256 :: INFO: CPM API worker initialized
+2019-03-18 20:07:04,256 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
+2019-03-18 20:07:04,938 :: DEBUG: Data: None
+2019-03-18 20:07:04,940 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/237/snapshots/copy_to_s3/
+2019-03-18 20:07:05,569 :: DEBUG: Data: None
+2019-03-18 20:07:05,569 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/238/snapshots/copy_to_s3/
+2019-03-18 20:07:06,186 :: DEBUG: Data: None
+2019-03-18 20:07:06,186 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/239/snapshots/copy_to_s3/
+2019-03-18 20:07:06,786 :: DEBUG: Data: None
+2019-03-18 20:07:06,786 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/241/snapshots/copy_to_s3/
+2019-03-18 20:07:07,372 :: DEBUG: Data: None
+2019-03-18 20:09:03,684 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
+2019-03-18 20:09:04,608 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
+2019-03-18 20:09:04,608 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiJlODVhODNjOTFmN2Y0NDcwYTkyZGVhMWJiOTE4MTFjOSIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjkzMjU0NH0.5i0ZbiIXKlJlnLq7XqifkRJtLpMsfvxpRnVR2eDXOi0
+2019-03-18 20:09:04,608 :: INFO: CPM API worker initialized
+2019-03-18 20:09:04,608 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
+2019-03-18 20:09:05,335 :: DEBUG: Data: None
+2019-03-18 20:09:05,336 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/237/snapshots/copy_to_s3/
+2019-03-18 20:09:05,989 :: DEBUG: Data: None
+2019-03-18 20:10:17,630 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
+2019-03-18 20:10:18,552 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
+2019-03-18 20:10:18,552 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiJlZWMyOTE1MjlmMmY0OTdmOTZhNThjMzU4OTc3ODhjNyIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjkzMjYxOH0.vIwDiuTgsTwWNucSpbbsvC8crQc9zOHoqO4878zVZzk
+2019-03-18 20:10:18,552 :: INFO: CPM API worker initialized
+2019-03-18 20:10:18,552 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
+2019-03-18 20:10:19,257 :: DEBUG: Data: None
+2019-03-18 20:10:19,259 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/237/snapshots/copy_to_s3/
+2019-03-18 20:10:19,913 :: DEBUG: Data: None
+2019-03-18 20:10:51,772 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/token/obtain/api_key/
+2019-03-18 20:10:52,680 :: DEBUG: Data: {'api_key': 'b9490fab3f625213809e87fab64a818b4b60041ea5c59c4405117fc4ede35021b96ae8b056386dfaad7bf00b4c4199869d75d4dcb061ec9c36f830d9078879f3'}
+2019-03-18 20:10:52,680 :: INFO: Token recived: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwidXNlcl9pZCI6IjEiLCJqdGkiOiI2NjIxMjg2MWYzNDU0NjY4OTQ4MjBhYmEyYTRjNjNjMSIsImFjYyI6IkNVU1RPTUVSUyIsImV4cCI6MTU1MjkzMjY1Mn0.zN7pHRZegPkwzbDNWI02szE4ockJRK63AHn3tR1ZXSQ
+2019-03-18 20:10:52,680 :: INFO: CPM API worker initialized
+2019-03-18 20:10:52,680 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/
+2019-03-18 20:10:53,394 :: DEBUG: Data: None
+2019-03-18 20:10:53,394 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/237/snapshots/copy_to_s3/
+2019-03-18 20:10:54,042 :: DEBUG: Data: None
+2019-03-18 20:10:54,042 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/238/snapshots/copy_to_s3/
+2019-03-18 20:10:54,684 :: DEBUG: Data: None
+2019-03-18 20:10:54,684 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/239/snapshots/copy_to_s3/
+2019-03-18 20:10:55,358 :: DEBUG: Data: None
+2019-03-18 20:10:55,358 :: DEBUG: Opening https://cpm25.hakeryu.ga/api/backups/241/snapshots/copy_to_s3/
+2019-03-18 20:10:56,017 :: DEBUG: Data: None

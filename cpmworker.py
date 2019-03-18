@@ -90,13 +90,16 @@ class CPMworker:
 
     API_SERVER_ID = "settings/identifier/"
     API_GET_SCAN = "/user/settings/scan_resources"
-    # todo remove this
 
     API_BACKUP_RECORDS = "backups/"
 
     HEADER_ACCEPT = "application/json; version: 1.1"
     HEADER_AUTHORIZATION = "Bearer {access_token}"
     headers = {'Accept': HEADER_ACCEPT}
+
+    s3status_success = 'S'
+    s3status_failed = 'F'
+    s3status_process = 'P'
 
     def __init__(self, host, api_key, verify_ssl = False):
         self.host = host
@@ -232,12 +235,9 @@ class CPMworker:
             self.URL_API.format(host=self.host, api_point=self.API_POLICY_S3.format(id=id)),
         )
 
-    def describe_S3_backups(self):
+    def describe_S3_backups(self, status ='S'):
         policies = self.list_backups()
-        for policy in policies:
-            if policy['s3_copy_status']['status'] == 'S':
-                print policy
-        return
+        return [ policy for policy in policies if policy['s3_copy_status']['status'] == status ]
 
     def describe_S3_backup(self, id):
         return self.send(
@@ -313,6 +313,7 @@ class CPMworker:
 def start_descrption():
     errors = list()
     return errors
+
 
 #wk = CPMworker(os.environ.get('CPMAPIHOST'),os.environ.get('CPMAPIKEY'))
 #print(wk.get_accounts())
